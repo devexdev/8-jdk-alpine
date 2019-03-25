@@ -10,3 +10,4 @@ RUN apk update && \
     apk upgrade && \
     apk add openjdk8="8.201.08-r0" && \
     sed -i '/password/{s/$/ minlen=8/}' /etc/pam.d/base-password
+COPY disabled-tls.properties .
